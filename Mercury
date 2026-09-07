@@ -588,16 +588,13 @@ function Library:create(options)
 		closeButton:tween{ImageColor3 = Library.CurrentTheme.StrongText}
 	end)
 
-	local function closeUI()
-    Library:show(false)
-	end
 
 	if getgenv then
 		getgenv().MercuryUI = closeUI
 	end
 
 	closeButton.MouseButton1Click:connect(function()
-		closeUI()
+    Library:show(false)
 	end)
 
 	local urlBar = core:object("Frame", {
