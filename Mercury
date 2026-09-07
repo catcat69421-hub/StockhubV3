@@ -589,8 +589,7 @@ function Library:create(options)
 	end)
 
 	local function closeUI()
-		core.ClipsDescendants = true
-		core:fade(true)
+	fadeOut()
 	end
 
 	if getgenv then
