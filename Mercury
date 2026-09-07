@@ -589,7 +589,9 @@ function Library:create(options)
 	end)
 
 	local function closeUI()
-	fadeOut()
+		core:tween({Size = UDim2.new()}, function()
+		core:fade(true)
+		end)
 	end
 
 	if getgenv then
